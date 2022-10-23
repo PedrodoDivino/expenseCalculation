@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/styles/login.css"> 
     <title>Login</title>
 </head>
 <body>
@@ -27,10 +27,9 @@
                 <div class="tela-cadastro">
                 <p id="conta">Não tem uma conta? <a href="cadastro.php" target="_blank" > Crie uma Conta.</a></p>
                 </div>
-                <a href="materia-prima.svg"><button class="botao-login">Entrar</button></a>
+                <a href="materia-prima.php"><button class="botao-login">Entrar</button></a>
             </div>
         </div>
     </div>
-   
 </body>
 </html>
