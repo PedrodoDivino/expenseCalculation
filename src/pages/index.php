@@ -4,38 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="../styles/login.css">
-    <title>Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/login.css">
+    <title>Login</title>
 </head>
 <body>
-<div class="main-login">
+    <div class="main-login">
         <div class="left-login">
-            <h1>Crie Sua Conta na<br>Expense Calculation</h1>
-            <img src="imgcadastro.svg" class="left-login-imagem" alt="Financas animacao">
+            <h1>Seja Bem vindo(a)<br>Faça seu Login</h1>
+            <img src="imglogin.svg" class="left-login-imagem" alt="Financas animacao">
         </div>
         <div class="right-login">
         <div class="tela-login">
-        <form action="#"> 
-            <div class="input-group w50">
-                   <label for="nomecompleto">Nome Completo</label>
-                    <input type="text" name="nomecompleto" placeholder="Digite seu Nome" required>
-                </div>
-                <div class="input-group  w50">
-                   <label for="valorhora">Valor da Hora</label>
-                    <input type="text" name="valorhora" placeholder="R$" required>
+                <h1>LOGIN</h1>   
+            <div class="textfield">
+                   <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" placeholder="E-mail">
                 </div>
                 <div class="textfield">
                    <label for="senha">Senha</label>
                     <input type="password" name="senha" placeholder="Senha">
                 </div>
                 <div class="tela-cadastro">
+                <p id="conta">Não tem uma conta? <a href="cadastro.php" target="_blank" > Crie uma Conta.</a></p>
                 </div>
                 <a href="cadastroProdutos.php" target="_blank"><button class="botao-login">Entrar</button></a>
             </div>
         </div>
-    </form>
     </div>
+   
 </body>
-</html> 
+</html>
