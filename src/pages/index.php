@@ -31,9 +31,8 @@
                     <input type="password" name="senha" placeholder="Senha">
                 </div>
                 <div class="tela-cadastro">
-                
                 </div>
-                <a href="materia-prima.svg"><button class="botao-login">Entrar</button></a>
+                <a href="cadastroProdutos.php" target="_blank"><button class="botao-login">Entrar</button></a>
             </div>
         </div>
     </form>
