@@ -10,21 +10,29 @@
     <title>Login</title>
 </head>
 <body>
-<form>
-  <div class="mb-3 fundo ">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Senha</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Seja Bem vindo(a)<br>Faça seu Login</h1>
+            <img src="imglogin.svg" class="left-login-imagem" alt="Financas animacao">
+        </div>
+        <div class="right-login">
+        <div class="tela-login">
+                <h1>LOGIN</h1>   
+            <div class="textfield">
+                   <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" placeholder="E-mail">
+                </div>
+                <div class="textfield">
+                   <label for="senha">Senha</label>
+                    <input type="password" name="senha" placeholder="Senha">
+                </div>
+                <div class="tela-cadastro">
+                <p id="conta">Não tem uma conta? <a href="index.php" target="_blank" > Crie uma Conta.</a></p>
+                </div>
+                <a href="materia-prima.svg"><button class="botao-login">Entrar</button></a>
+            </div>
+        </div>
+    </div>
+   
 </body>
 </html>
