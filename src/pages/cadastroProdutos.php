@@ -13,41 +13,40 @@
 </head>
 <body>
     
-    <header>
-        <img class="logo" src="https://raw.githubusercontent.com/PedrodoDivino/expenseCalculation/main/src/pages/logoExpense.png" alt="logo">
+            <header>
+        <img class="logo" src="logoExpense.png" alt="logo">
+
         <nav>
             <ul class="nav_links">
- 
-                <li><a href="#">ESTOQUE</a></li>
-                <li><a href="#">ENTRADA</a></li>
-                <li><a href="#">MINHAS RECEITAS</a></li>
-                <li><a href="#">CADASTRO DE PRODUTOS</a></li>
-                <li><a href="#">NOVAS RECEITAS</a></li>
-                <li><a href="#">MEUS RESULTADOS</a></li>
- 
+                  <li><a href="materiaPrima.php">MATÉRIA PRIMA</a></li>
+                <li><a href="entradas.php">ENTRADA</a></li>
+                <li><a href="minhasReceitas.php">MINHAS RECEITAS</a></li>
+                <li><a href="cadastroProdutos.php">CADASTRO DE PRODUTOS</a></li>
+                <li><a href="novasReceitas.php">NOVAS RECEITAS</a></li>
+                <li><a href="resultados.php">MEUS RESULTADOS</a></li>
             </ul>
         </nav>
     </header>
-    <center>
-<body>
+<div class="container">
     <div class="row">
         <div class="col">
-          
             <h5>Nome do produto</h5>
-           
           <input type="text" class="form-control"  placeholder="Ex: Cenoura">
           <br>
           <h5>Descrição</h5>
           <input type="text" class="form-control"  placeholder="Ex: Rico em vitamina A">
+        </div>   
+       
+        <div class="containerImage">
+             <img class="logo" src="https://raw.githubusercontent.com/PedrodoDivino/expenseCalculation/main/src/pages/logoExpense.png" alt="logo">    
         </div>
-</body>            
-    </center>
-    <center>
-        <img class="logo" src="https://raw.githubusercontent.com/PedrodoDivino/expenseCalculation/main/src/pages/logoExpense.png" alt="logo">
-      </center>
-      <div class="buttonSave">
-       <button type="submit" class="btn btn-primary">Salvar</button>
+        
+       <div class="button">
+<button type="submit" class="btn btn-primary">Salvar</button>
+</div>
+
+
+
   </div>
-   
 </body>
 </html>
