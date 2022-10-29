@@ -1,0 +1,77 @@
+body {
+    background-color: #250048;
+}
+
+
+a,
+.buttonSave {
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    display: flex;
+    justify-content: end;
+   
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 0%;
+}
+
+.logo {
+    cursor: pointer;
+    margin-left: auto;
+    order: 3;
+    width: 150px;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #15B0DB;
+    ;
+}
+
+table,
+th,
+td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+h1 {
+    color: white;
+}
+h5{
+    color: white;
+}
+
+div{
+    width: 45%;
+    margin: 40px;
+
+}
