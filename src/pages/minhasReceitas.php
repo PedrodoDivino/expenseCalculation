@@ -109,8 +109,12 @@
     <input type="number"  class=" form-control" placeholder="Chocolate">
   </div>
 </div>
+</div> 
+  </div>
+  <div class="button">
+<button type="submit" class="btn btn-primary">Salvar</button>
 
-    </div>
-
+  </div>
+   
 </body>
 </html>
