@@ -4,29 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../styles/meusResultados.css">
+    <title>MEUS RESULTADOS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../styles/meusResultados.css">
 </head>
 <body>
-    <header>
-        <img class="logo" src="https://raw.githubusercontent.com/PedrodoDivino/expenseCalculation/main/src/pages/logoExpense.png"logo">
+  <header>
+        <img class="logo" src="logoExpense.png" alt="logo">
+
         <nav>
             <ul class="nav_links">
- 
-                <li><a href="#">MATÉRIA PRIMA</a></li>
-                <li><a href="#">ENTRADA</a></li>
-                <li><a href="#">MINHAS RECEITAS</a></li>
-                <li><a href="#">CADASTRO DE PRODUTOS</a></li>
-                <li><a href="#">NOVAS RECEITAS</a></li>
-                <li><a href="#">MEUS RESULTADOS</a></li>
- 
+                  <li><a href="materiaPrima.php">MATÉRIA PRIMA</a></li>
+                <li><a href="entradas.php">ENTRADA</a></li>
+                <li><a href="minhasReceitas.php">MINHAS RECEITAS</a></li>
+                <li><a href="cadastroProdutos.php">CADASTRO DE PRODUTOS</a></li>
+                <li><a href="novasReceitas.php">NOVAS RECEITAS</a></li>
+                <li><a href="resultados.php">MEUS RESULTADOS</a></li>
             </ul>
         </nav>
     </header>
-      <center>
-        <h3>Resumo De Despesas e Lucros</h3>
-      </center>
-      <h5>Não Calculamos seu Gás</h5>
+     <div class="container">
+               <h3>Resumo De Despesas e Lucros</h3>
+     </div>
+     <div class="resultados">
+         <h5>Não Calculamos seu Gás</h5>
       <h5>por restrições de cada</h5>
      <h5> forno ou fogão utilizados é</h5>
      <h5> necessario conferir no </h5>
@@ -43,15 +45,12 @@
                  <h5>B = Capacidade do botijão </h5>
                  <h5>(13 ou 45 Kg);</h5>
                  <h5>PB = Preço do Botijão.</h5>
-         <form>    
-            <center> 
+     </div>
+     
+  
                 <div class="button">
                     <button type="submit" class="btn btn-primary">Minhas Receitas</button>
-                      </div>
+                </div>
                   </div>
-                </center>
-                </form>  
- 
-           
 </body>
 </html>
