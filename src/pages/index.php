@@ -27,7 +27,7 @@
                     <input type="password" name="senha" placeholder="Senha">
                 </div>
                 <div class="tela-cadastro">
-                <p id="conta">Não tem uma conta? <a href="cadastro.php" target="_blank" > Crie uma Conta.</a></p>
+                <p id="conta">Não tem uma conta? <a href="cadastroUsuario.php" target="_blank" > Crie uma Conta.</a></p>
                 </div>
                 <a href="cadastroProdutos.php" target="_blank"><button class="botao-login">Entrar</button></a>
             </div>

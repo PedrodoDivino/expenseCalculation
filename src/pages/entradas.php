@@ -18,7 +18,7 @@
                 <li><a href="minhasReceitas.php">MINHAS RECEITAS</a></li>
                 <li><a href="cadastroProdutos.php">CADASTRO DE PRODUTOS</a></li>
                 <li><a href="novasReceitas.php">NOVAS RECEITAS</a></li>
-                <li><a href="resultados.php">MEUS RESULTADOS</a></li>
+                <li><a href="meusResultados.php">MEUS RESULTADOS</a></li>
             </ul>
         </nav>
     </header>
