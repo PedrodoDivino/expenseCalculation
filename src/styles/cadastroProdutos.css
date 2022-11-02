@@ -47,8 +47,9 @@ header {
 }
 
 .nav_links li {
-    display: inline-block;
+    display: inline;
     padding: 0px 20px;
+    justify-content: space-between;
 }
 
 .nav_links li a {

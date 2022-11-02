@@ -28,31 +28,31 @@
     
     <div class="card" style="width: 18rem;">
   <div class=" fundoCard card-body">
-    <h1 class="card-title">bolo de cenura</h1>
-    <p class="card-text"><h2> massa</h2> 
-    <p>1/2 xícara (chá) de óleo 
+    <h1 class="card-title">Bolo de Cenura</h1>
+    <p class="card-text"><h2> Massa</h2> 
+    <p>1/2 Xícara (chá) de Óleo 
     <br>  
-3 cenouras médias raladas
+3 Cenouras Médias Raladas
 <br>
-4 ovos
+4 Ovos
 <br>
-2 xícaras (chá) de açúcar
+2 Xícaras (chá) de Açúcar
 <br>
-2 e 1/2 xícaras (chá) de farinha de trigo
+2 1/2 Xícaras (chá) de Farinha de Trigo
 <br>
-1 colher (sopa) de fermento em pó
+1 Colher (sopa) de Fermento em Pó
 <br>
-<h2>COBERTURA</h2>
+<h2>Cobertura</h2>
   <p>
-1 colher (sopa) de manteiga
+1 Colher (sopa) de Manteiga
 <br>
-3 colheres (sopa) de chocolate em pó
+3 Colheres (sopa) de Chocolate em Pó
 <br>
-1 xícara (chá) de açúcar
+1 Xícara (chá) de Açúcar
 <br>
-1 xícara (chá) de leite
+1 Xícara (chá) de Leite
 </p>   
-<a href="#" class="btn btn-primary">fabricar</a>
+<a href="#" class="btn btn-primary">Fabricar</a>
   </div>
 </div>
 </body>
