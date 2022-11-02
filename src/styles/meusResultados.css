@@ -18,6 +18,7 @@ button {
     color: white;
     text-decoration: none;
     margin: 10px;
+   
 }
 
 header {
@@ -49,24 +50,14 @@ header {
 
 .nav_links li a:hover {
     color: #15B0DB;
-    ;
+    
 }
-
-
-.button {
-    font-weight: 500;
-    font-size: 16px;
-    color: white;
-    margin: 10px;
-    text-align: center;
-}
-
 
 h1 {
     color: white;
 }
 
-h5 {
+p {
     color: white;
     text-align: right;
     width: 95%;
@@ -82,5 +73,8 @@ h3 {
 
 .resultados {
     border-left: 1px solid white;
-    margin-left: 75%;
+    margin-left:85%;
+}
+.button{
+    text-align: center;
 }
