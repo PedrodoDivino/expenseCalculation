@@ -10,7 +10,6 @@
     <title>Matéria Prima</title>
 </head>
 <body>
-    
     <header>
         <img class="logo" src="logoExpense.png" alt="logo">
 
@@ -39,6 +38,6 @@
             <td>Valor(R$)</td>
         </tr>
     </table>
-    
+
 </body>
 </html>
