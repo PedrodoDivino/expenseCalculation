@@ -66,13 +66,13 @@
 
                     <div class="input-box">
                         <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required minlength="8" maxlength="100">
                     </div>
 
 
                     <div class="input-box">
                         <label for="confirmPassword">Confirme Sua Senha</label>
-                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirme Senha" required>
+                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirme Senha" required minlength="8" maxlength="100">
                     </div>
 
                 </div>

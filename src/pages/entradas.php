@@ -30,24 +30,22 @@
     Nome do produto
   <select class="form-select" aria-label="Default select example">
   <option selected>Cenoura</option>
-  <option value="1">óleo</option>
-  <option value="2">fermento</option>
-  <option value="3">ovo</option>
+  <option value="1">Óleo</option>
+  <option value="2">Fermento</option>
+  <option value="3">Ovo</option>
 </select>
   </div>
   <div class="col">
      Quantidade (gr)
-    <input type="number" class="form-control"  aria-label="Last name">
+    <input type="number" class="form-control"  aria-label="Last name" required>
   </div>
   <div class="col">
    Valor Reais
-    <input type="number" class="form-control"  aria-label="Last name">
-  </div>
-  <div class="row">
-</div> 
-  </div>
+    <input type="number" class="form-control"  aria-label="Last name" required>
+    </div>
   <div class="button">
-<button type="submit" class="btn btn-primary">Salvar</button>
+  <a href="#"> <button type="submit" class="btn btn-primary">Salvar</button></a>
+  </div>
   </div>
 </body>
 </html>

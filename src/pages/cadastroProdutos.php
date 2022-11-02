@@ -31,10 +31,10 @@
     <div class="row">
         <div class="col">
             <h5>Nome do produto</h5>
-          <input type="text" class="form-control"  placeholder="Ex: Cenoura">
+          <input type="text" class="form-control"  placeholder="Ex: Cenoura" required>
           <br>
           <h5>Descrição</h5>
-          <input type="text" class="form-control"  placeholder="Ex: Rico em vitamina A">
+          <input type="text" class="form-control"  placeholder="Ex: Rico em vitamina A" required>
         </div>   
        <div class="button">
 <button type="submit" class="btn btn-primary">Salvar</button>

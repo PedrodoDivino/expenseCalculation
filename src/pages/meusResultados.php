@@ -28,28 +28,26 @@
                <h3>Resumo De Despesas e Lucros</h3>
      </div>
      <div class="resultados">
-         <h5>Não Calculamos seu Gás</h5>
-      <h5>por restrições de cada</h5>
-     <h5> forno ou fogão utilizados é</h5>
-     <h5> necessario conferir no </h5>
-     <h5> manual do seu fogão.</h5><br>
-             <h5>Gasto em R$ = (((T/60)*Kg/</h5>
-             <h5>h)/B)*PB</h5><
-                 <h5>Onde:</h5>
-                 <h5>T = Tempo de uso em</h5>
-                 <h5> minutos dividido por 60;</h5>
-                 <h5>Kg/h = Consumo por</h5> 
-                 <h5>queimador, em Kg/h (ver o</h5>
-                 <h5> manual do fabricante do</h5>
-                 <h5> fogão);</h5>
-                 <h5>B = Capacidade do botijão </h5>
-                 <h5>(13 ou 45 Kg);</h5>
-                 <h5>PB = Preço do Botijão.</h5>
+         <p>Não Calculamos seu Gás
+      por restrições de cada
+      forno ou fogão utilizados é
+      necessario conferir no 
+      manual do seu fogão.
+             <br>Gasto em R$ = (((T/60)*Kg/
+             h)/B)*PB
+                 Onde:
+                 T = Tempo de uso em
+                  minutos dividido por 60;
+                 Kg/h = Consumo por
+                 queimador, em Kg/h (ver o
+                  manual do fabricante do
+                  fogão);
+                 B = Capacidade do botijão 
+                 (13 ou 45 Kg);
+                 PB = Preço do Botijão.</p>
      </div>
-     
-  
                 <div class="button">
-                    <button type="submit" class="btn btn-primary">Minhas Receitas</button>
+                    <a href="minhasReceitas.php"><button type="submit" class="btn btn-primary">Minhas Receitas</button></a>
                 </div>
                   </div>
 </body>
