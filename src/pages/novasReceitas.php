@@ -27,11 +27,11 @@
 <div class="row">
   <div class="col">
     Nome da Receita
-    <input type="text" class="form-control"  aria-label="First name">
+    <input type="text" class="form-control"  aria-label="First name" required>
   </div>
   <div class="col">
      Margem de lucro %
-    <input type="number" class="form-control"  aria-label="Last name">
+    <input type="text" class="form-control"  aria-label="Last name" minlength="1" maxlength="100">
   </div>
   <div class="row">
   <div class="col">
