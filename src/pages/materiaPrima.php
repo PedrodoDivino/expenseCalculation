@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../styles/materiaPrima.css">
     <title>Matéria Prima</title>
 </head>
-<body>
 <header>
   <nav>
     <ul>
@@ -23,6 +22,7 @@
     </ul>
   </nav>
 </header>
+<body>
 
     <div class="container">
     <table class="table">

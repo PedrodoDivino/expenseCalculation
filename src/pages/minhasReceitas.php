@@ -9,8 +9,6 @@
      <link rel="stylesheet" href="../styles/minhasReceitas.css">
     <title>Minhas Receitas</title>
 </head>
-<body>
-
 <header>
   <nav>
     <ul>
@@ -24,32 +22,27 @@
     </ul>
   </nav>
 </header>
-
+<body>
     <div class="card" style="width: 18rem;">
   <div class=" fundoCard card-body">
     <h1 class="card-title">Bolo de Cenura</h1>
-    <p class="card-text"><h2> Massa</h2> 
-    <p>1/2 Xícara (chá) de Óleo 
-    <br>  
-3 Cenouras Médias Raladas
+<p>Óleo 250gr
+<br>  
+Cenoura 300g
 <br>
-4 Ovos
+Ovos 53gr
 <br>
-2 Xícaras (chá) de Açúcar
+Farinha de Trigo 400g
 <br>
-2 1/2 Xícaras (chá) de Farinha de Trigo
+Fermento em Pó 20g
 <br>
-1 Colher (sopa) de Fermento em Pó
+Manteiga 20gr
 <br>
-<h2>Cobertura</h2>
-  <p>
-1 Colher (sopa) de Manteiga
+Chocolate em Pó 200gr
 <br>
-3 Colheres (sopa) de Chocolate em Pó
+Açúcar 200g
 <br>
-1 Xícara (chá) de Açúcar
-<br>
-1 Xícara (chá) de Leite
+Leite 350gr
 </p>   
 <a href="#" class="btn btn-primary">Fabricar</a>
   </div>

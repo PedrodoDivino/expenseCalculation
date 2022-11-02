@@ -11,22 +11,20 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+<header>
+  <nav>
+    <ul>
+     <a href="materiaPrima.php"><li>MATÉRIA PRIMA</a>
+      <a href="entradas.php"><li>ENTRADA</a>
+      <a href="minhasReceitas.php"><li>MINHAS RECEITAS</a>
+      <a href="cadastroProdutos.php"><li>CADASTRO DE PRODUTOS</a>
+      <a href="novasReceitas.php"><li>NOVAS RECEITAS</a>
+       <a href="meusResultados.php"><li>MEUS RESULTADOS</a>
+       <li><img id="logo" src="logoExpense.png" alt="logo"></li>
+    </ul>
+  </nav>
+</header>
 <body>
-    
-            <header>
-        <img class="logo" src="logoExpense.png" alt="logo">
-
-        <nav>
-            <ul class="nav_links">
-                  <li><a href="materiaPrima.php">MATÉRIA PRIMA</a></li>
-                <li><a href="entradas.php">ENTRADA</a></li>
-                <li><a href="minhasReceitas.php">MINHAS RECEITAS</a></li>
-                <li><a href="cadastroProdutos.php">CADASTRO DE PRODUTOS</a></li>
-                <li><a href="novasReceitas.php">NOVAS RECEITAS</a></li>
-                <li><a href="meusResultados.php">MEUS RESULTADOS</a></li>
-            </ul>
-        </nav>
-    </header>
 <div class="container">
     <div class="row">
         <div class="col">
