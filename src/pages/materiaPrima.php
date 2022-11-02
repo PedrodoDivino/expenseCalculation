@@ -23,21 +23,59 @@
                 <li><a href="meusResultados.php">MEUS RESULTADOS</a></li>
             </ul>
         </nav>
-    </header>
+    </header>  
 
-    <h1>ESTOQUE DE PRODUTOS</h1>
-    <table>
-        <tr>
-            <td>Produto</td>
-            <td>Quantidade(gr)</td>
-            <td>Valor(R$)</td>
-        </tr>
-        <tr>
-            <td>Produto</td>
-            <td>Quantidade(gr)</td>
-            <td>Valor(R$)</td>
-        </tr>
-    </table>
-
+    <div class="container">
+    <table class="table">
+  <caption>Lista de produtos</caption>
+  <thead>
+  <tr class="table-dark">
+      <th scope="col">#</th>
+      <th scope="col">Produto</th>
+      <th scope="col">Quantidade(gr)</th>
+      <th scope="col">Valor(R$)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-light">
+      <th scope="row">1</th>
+      <td>Chocolate</td>
+        <td>700</td>
+        <td>20,00</td>
+    </tr>
+    <tr class="table-light">
+      <th scope="row">2</th>
+        <td>Farinha</td>
+        <td>1000</td>
+        <td>62,32</td>
+    </tr>
+    <tr class="table-light">
+      <th scope="row">3</th>
+        <td>Ovo</td>
+        <td>30</td>
+        <td>45,75</td>
+    </tr>
+    <tr class="table-light">
+    <th scope="row">4</th>
+        <td>Açúcar</td>
+        <td>800</td>
+        <td>30,00</td>
+    </tr>
+    <tr class="table-light">
+    <th scope="row">5</th>
+        <td>Óleo</td>
+        <td>1200</td>
+        <td>95,23</td>
+    </tr>
+    <tr class="table-light">
+    <th scope="row">6</th>
+        <td>Leite</td>
+        <td>1000</td>
+        <td>80,00</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    
 </body>
 </html>

@@ -36,11 +36,11 @@
   </div>
   <div class="col">
      Quantidade (gr)
-    <input type="number" class="form-control"  aria-label="Last name">
+    <input type="number" class="form-control"  aria-label="Last name" required>
   </div>
   <div class="col">
    Valor Reais
-    <input type="number" class="form-control"  aria-label="Last name">
+    <input type="number" class="form-control"  aria-label="Last name" required>
     </div>
   <div class="button">
   <a href="#"><button type="submit" class="btn btn-primary">Salvar</button></a>
