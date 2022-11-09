@@ -12,11 +12,10 @@
 <header>
   <nav>
     <ul>
-     <a href="materiaPrima.php"><li>MATÉRIA PRIMA</a>
+     <a href="estoqueProduto.php"><li>ESTOQUE DE PRODUTO</a>
       <a href="minhasReceitas.php"><li>MINHAS RECEITAS</a>
       <a href="cadastroMateriaPrima.php"><li>CADASTRO MATERIA PRIMA</a>
       <a href="novasReceitas.php"><li>NOVAS RECEITAS</a>
-       <a href="meusResultados.php"><li>MEUS RESULTADOS</a>
        <li><img id="logo" src="logoExpense.png" alt="logo"></li>
     </ul>
   </nav>

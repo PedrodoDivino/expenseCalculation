@@ -20,11 +20,11 @@
                 <h1>LOGIN</h1>   
             <div class="textfield">
                    <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="E-mail">
+                    <input type="text" name="usuario" placeholder="E-mail" required>
                 </div>
                 <div class="textfield">
                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
+                    <input type="password" name="senha" placeholder="Senha"  required>
                 </div>
                 <div class="tela-cadastro">
                 <p id="conta">Não tem uma conta? <a href="cadastroUsuario.php" target="_blank" > Crie uma Conta.</a></p>
