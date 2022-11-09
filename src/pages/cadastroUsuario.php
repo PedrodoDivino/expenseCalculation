@@ -58,6 +58,10 @@
                         <label for="bairro">Bairro</label>
                         <input id="bairro" type="text" name="bairro" placeholder="Digite seu Bairro" required>
                     </div>
+                        <div class="input-box">
+                        <label for="complemento">Complento</label>
+                        <input id="complemento" type="text" name="complemento" placeholder="Digite seu complemento" required>
+                    </div>
 
                     <div class="input-box">
                         <label for="password">Senha</label>

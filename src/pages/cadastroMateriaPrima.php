@@ -24,7 +24,7 @@
 </header>
 <body>
 <div class="container">
-  <form action="" method="post">
+  <form action="estoqueProduto.php" method="post">
     <div class="row">
         <div class="col">
           <h5>Nome Matéria Prima</h5>
