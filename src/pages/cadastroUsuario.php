@@ -34,11 +34,6 @@
                     </div>
 
                     <div class="input-box">
-                        <label for="number">Telefone Fixo</label>
-                        <input id="number" type="number" name="number" placeholder="(xx) xxxx-xxxx">
-                    </div>
-
-                    <div class="input-box">
                         <label for="number">Telefone Celular</label>
                         <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
                     </div>
@@ -67,12 +62,6 @@
                     <div class="input-box">
                         <label for="password">Senha</label>
                         <input id="password" type="password" name="password" placeholder="Digite sua senha" required minlength="8" maxlength="100">
-                    </div>
-
-
-                    <div class="input-box">
-                        <label for="confirmPassword">Confirme Sua Senha</label>
-                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirme Senha" required minlength="8" maxlength="100">
                     </div>
 
                 </div>

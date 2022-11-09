@@ -27,11 +27,20 @@
   <form action="" method="post">
     <div class="row">
         <div class="col">
-            <h5>Nome do produto</h5>
-          <input type="text" class="form-control"  placeholder="Ex: Cenoura" required>
+          <h5>Nome Matéria Prima</h5>
+          <input type="text" class="form-control" name="materiaPrima" placeholder="Ex: Cenoura" required>
           <br>
           <h5>Descrição</h5>
-          <input type="text" class="form-control"  placeholder="Ex: Rico em vitamina A" required>
+          <input type="text" class="form-control"  name="descricao" placeholder="Ex: Rico em vitamina A" required>
+                    <br>
+          <h5>Quantidade</h5>
+          <input type="number" class="form-control"  name="domeMQuantidade"placeholder="Ex: 100gr" required>
+                    <br>
+          <h5>Valor Total</h5>
+          <input type="number" class="form-control"  name="nomeValorTotal"placeholder="Ex: 50.00"required>
+                    <br>
+          <h5>Data Entrada</h5>
+          <input type="date" class="form-control" name="datadeEntrada" placeholder="Ex: 30/09/2022" required>
         </div>   
        <div class="button">
 <button type="submit"  class="btn btn-primary">Salvar</button>
@@ -40,3 +49,26 @@
 </div>
 </body>
 </html>
+
+
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+Salvar
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Titulo</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+    Meu conteúdo aqui
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div> -->
