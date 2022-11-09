@@ -13,9 +13,8 @@
   <nav>
     <ul>
      <a href="materiaPrima.php"><li>MATÉRIA PRIMA</a>
-      <a href="entradas.php"><li>ENTRADA</a>
       <a href="minhasReceitas.php"><li>MINHAS RECEITAS</a>
-      <a href="cadastroProdutos.php"><li>CADASTRO DE PRODUTOS</a>
+      <a href="cadastroMateriaPrima.php"><li>CADASTRO MATERIA PRIMA</a>
       <a href="novasReceitas.php"><li>NOVAS RECEITAS</a>
        <a href="meusResultados.php"><li>MEUS RESULTADOS</a>
        <li><img id="logo" src="logoExpense.png" alt="logo"></li>

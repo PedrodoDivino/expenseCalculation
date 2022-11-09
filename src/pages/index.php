@@ -29,7 +29,7 @@
                 <div class="tela-cadastro">
                 <p id="conta">Não tem uma conta? <a href="cadastroUsuario.php" target="_blank" > Crie uma Conta.</a></p>
                 </div>
-                <a href="cadastroProdutos.php"><button class="botao-login">Entrar</button></a>
+                <a href="cadastroMateriaPrima.php"><button class="botao-login">Entrar</button></a>
             </div>
         </div>
     </div>

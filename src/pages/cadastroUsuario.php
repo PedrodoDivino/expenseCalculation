@@ -78,7 +78,7 @@
                 </div>
 
                 <div class="entrar-button">
-                    <button><a href="cadastroProdutos.php" target="_blank">Criar Conta</a> </button>
+                    <button><a href="cadastroMateriaPrima.php" target="_blank">Criar Conta</a> </button>
                 </div>
             </form>
         </div>
