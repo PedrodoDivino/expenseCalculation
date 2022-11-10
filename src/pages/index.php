@@ -10,6 +10,7 @@
     <title>Login</title>
 </head>
 <body>
+
     <div class="main-login">
         <div class="left-login">
             <h1>Seja Bem vindo(a)<br>Faça seu Login</h1>
@@ -33,6 +34,17 @@
             </div>
         </div>
     </div>
-   
+    <!-- FIXME:ajustar elementos para a tela e cadastro e login
+    
+   // <?php
+     //   include '../db/conectBanco.php';
+       // $nome = $_POST['usuario'];
+      //  $sql = "insert into usuarios (nome, email,senha,data_nascimento) 
+      //  values(0,'','$nome',1)";
+      //  $banco->query($sql);
+      //  if($banco->affected_rows >0 ){
+     //     echo"Matéria prima $nome cadastrado com sucesso";
+     ///   }
+      ?> -->
 </body>
 </html>
