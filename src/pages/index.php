@@ -19,6 +19,7 @@
         <div class="tela-login">
                 <h1>LOGIN</h1>   
             <div class="textfield">
+                <form action="../db/verificaLogin.php" method="post">
                    <label for="usuario">Usuário</label>
                     <input type="text" name="usuario" placeholder="E-mail" required>
                 </div>
@@ -30,7 +31,9 @@
                 <p id="conta">Não tem uma conta? <a href="cadastroUsuario.php" target="_blank" > Crie uma Conta.</a></p>
                 </div>
                 <a href="cadastroMateriaPrima.php"><button class="botao-login">Entrar</button></a>
+                </form>
             </div>
+    
         </div>
     </div>
    
