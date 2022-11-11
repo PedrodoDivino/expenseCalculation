@@ -6,3 +6,13 @@ if($banco->connect_errno){
     echo "Conectado no banco de dados";
 }
 ?>
+<?php 
+
+function validatition($path){ 
+
+    if(!is_string($_SESSION['email'])){
+        header('location: '.$path);
+        exit;
+}
+
+?>
