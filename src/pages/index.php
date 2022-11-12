@@ -1,7 +1,7 @@
 <?php
-include('../bd/conectaBanco.php');    
+include('../db/conectaBanco.php');    
 if(isset($_POST['email']) || isset($_POST['senha'])){
-    if (strlen($_POST['email']) > 0) {
+    if (strlen($_POST['email']) == 0) {
         echo  "Preencha seu email";
     }elseif (strlen($_POST['senha']) == 0){
       echo  "Preencha sua senha";
@@ -25,7 +25,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
             $_SESSION['id'] = $usuario['id'];
              $_SESSION['nome'] = $usuario['nome'];
 
-             header("location: cadastroMateriaPrima.php");
+             header("location: http://localhost/expenseCalculation/src/pages/cadastroMateriaPrima.php");
 
          } else{
             echo "falha ao logar, email ou senha incorretos";
@@ -57,7 +57,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
             <div class="textfield">
                 <form action="" method="post">
                    <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="E-mail" required>
+                    <input type="text" name="email" placeholder="E-mail" required>
                 </div>
                 <div class="textfield">
                    <label for="senha">Senha</label>
@@ -66,7 +66,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
                 <div class="tela-cadastro">
                     <p id="conta">Não tem uma conta? <a href="cadastroUsuario.php" target="_blank" > Crie uma Conta.</a></p>
                 </div>
-                    <a href="cadastroMateriaPrima.php"><button class="botao-login">Entrar</button></a>
+                  <button type="submit"  class="botao-login">Entrar</button>
                 </form>
             </div>
     
