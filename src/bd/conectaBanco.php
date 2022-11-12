@@ -1,18 +1,13 @@
 <?php
-$banco = new mysqli("localhost","root","","expense",3306);
-if($banco->connect_errno){
-    echo "Erro ao conectar no banco de dados";
-}else{
-    echo "Conectado no banco de dados";
-}
-?>
-<?php 
+$usuario = 'root';
+$senha = '';
+$dataBase = '';
+$host = 'localhost';
 
-function validatition($path){ 
+$mysqli = new mysqli($host, $usuario, $senha, $dataBase);
 
-    if(!is_string($_SESSION['email'])){
-        header('location: '.$path);
-        exit;
+if($mysqli->error){
+    die("falha ao conectar ao database: " . $mysqli->error);
 }
 
 ?>
