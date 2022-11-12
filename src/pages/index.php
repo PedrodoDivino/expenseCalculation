@@ -52,19 +52,21 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
     <div class="tela-login">
         <h1>LOGIN</h1>   
             <div class="textfield">
-                <form action="" method="post">
-                <label for="usuario">Usuário</label>
-                <input type="text" name="email" placeholder="E-mail" required>
-            </div>
-            <div class="textfield">
-            <label for="senha">Senha</label>
-            <input type="password" name="senha" placeholder="Senha"  required>
-            </div>
+                <form action="../db/verificaLogin.php" method="post">
+                   <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" placeholder="E-mail" required>
+                </div>
+                <div class="textfield">
+                   <label for="senha">Senha</label>
+                    <input type="password" name="senha" placeholder="Senha"  required>
+                </div>
                 <div class="tela-cadastro">
                     <p id="conta">Não tem uma conta? <a href="cadastroUsuario.php" target="_blank" > Crie uma Conta.</a></p>
                 </div>
                     <a href="cadastroMateriaPrima.php"><button class="botao-login">Entrar</button></a>
+                </form>
             </div>
+    
         </div>
     </div>
 
