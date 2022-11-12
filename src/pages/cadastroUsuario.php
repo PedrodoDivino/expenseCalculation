@@ -2,26 +2,38 @@
     session_start();
     include('../db/conectaBanco.php');    
 
-    $nome = mysqli_real_escape_string($mysqli, trim($_POST['nome']));
-    $email = mysqli_real_escape_string($mysqli, trim($_POST['email']));
-    $numerCelular = mysqli_real_escape_string($mysqli, trim($_POST['numeroCelular']));
-    $dataNascimento = mysqli_real_escape_string($mysqli, trim($_POST['data']));
-    $numeroResidencia = mysqli_real_escape_string($mysqli, trim($_POST['numero']));
-    $bairro = mysqli_real_escape_string($mysqli, trim($_POST['bairro']));
-    $complemento = mysqli_real_escape_string($mysqli, trim($_POST['complemento']));
-    $endereco = mysqli_real_escape_string($mysqli, trim($_POST['endereco']));
-    $senha = mysqli_real_escape_string($mysqli, trim($_POST['senha']));
-    $usuario = mysqli_real_escape_string($mysqli, trim($_POST['usuario']));
+    $nome = $mysqli->real_escape_string($_POST['nome']); 
+    $email = $mysqli->real_escape_string($_POST['email']); 
+    $numeroCelular = $mysqli->real_escape_string($_POST['numeroCelular']); 
+    $dataNascimento = $mysqli->real_escape_string($_POST['dataNascimento']); 
+    $numeroResidencia = $mysqli->real_escape_string($_POST['numero']); 
+    $bairro = $mysqli->real_escape_string($_POST['bairro']); 
+    $complemento = $mysqli->real_escape_string($_POST['complemento']); 
+    $endereco = $mysqli->real_escape_string($_POST['endereco']); 
+    $senha = $mysqli->real_escape_string($_POST['senha']); 
+   $usuario = $mysqli->real_escape_string($_POST['usuario']); 
     
     $sql_code = "select count(*) as total from usuarios where usuario = '$usuario'";
-    $result = mysqli_query($sql_code);
+    $result = mysqli_query($mysqli, $sql_code);
     $row = mysqli_fetch_assoc($result);
 
     if ($row['total'] == 1) {
-$_SESSION['usuario_existe'] = true;
-    header('Location: http://localhost/expenseCalculation/src/pages/ ')
+    $_SESSION['usuario_existe'] = true;
+    header('Location: http://localhost/expenseCalculation/src/pages/ ');
+    echo 'aqui';
+    exit;
     }
 
+      $sql_code = "INSERT INTO usuarios (nome, email, senha, dataNascimento, numeroCelular) 
+      VALUES ('$nome', '$email', $senha, '$dataNascimento', '$numeroCelular', NOW())";
+
+      if ($mysqli->query($sql_code) === TRUE){
+        $_SESSION['status_cadastro'] = true;
+      }
+      $mysqli->close();
+
+    //   header('Location: localhost/expenseCalculation/src/pages/cadastroUsuario.php');
+    exit;
     ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -64,8 +76,8 @@ $_SESSION['usuario_existe'] = true;
                     </div>
 
                     <div class="input-box">
-                        <label for="data">Data Nascimento</label>
-                        <input id="data" type="date" name="data" placeholder="xx/xx/xxxx">
+                        <label for="dataNascimento">Data Nascimento</label>
+                        <input id="dataNascimento" type="date" name="dataNascimento" placeholder="xx/xx/xxxx">
                     </div>
 
                     <div class="input-box">
