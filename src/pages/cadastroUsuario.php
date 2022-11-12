@@ -1,3 +1,19 @@
+    <?php
+    session_start();
+    include('../db/conectaBanco.php');    
+
+    $nome = mysqli_real_escape_string($mysqli, $_POST['nome']);
+    $email = mysqli_real_escape_string($mysqli, $_POST['email']);
+    $numerCelular = mysqli_real_escape_string($mysqli, $_POST['number']);
+    $dataNascimento = mysqli_real_escape_string($mysqli, $_POST['data']);
+    $numeroResidencia = mysqli_real_escape_string($mysqli, $_POST['numero']);
+    $bairro = mysqli_real_escape_string($mysqli, $_POST['bairro']);
+    $complemento = mysqli_real_escape_string($mysqli, $_POST['complemento']);
+    $endereco = mysqli_real_escape_string($mysqli, $_POST['endereco']);
+    $senha = mysqli_real_escape_string($mysqli, $_POST['senha']);
+    
+
+    ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -15,7 +31,7 @@
             <img src="imgcadastro.svg" alt="">
         </div>
         <div class="form">
-            <form action="#">
+            <form action="">
                 <div class="form-header">
                     <div class="title">
                         <h1>Criar Conta</h1>
@@ -64,15 +80,14 @@
                     </div>
 
                     <div class="input-box">
-                        <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required minlength="8" maxlength="100">
+                        <label for="senha">Senha</label>
+                        <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required minlength="8" maxlength="100">
                     </div>
 
                 </div>
 
                 <div class="entrar-button">
-                 <button>
-                    <a href="cadastroMateriaPrima.php">Criar Conta</a>
+                 <button type="submit" >Cadastrar
                 </button> 
                 </div>
             </form>
