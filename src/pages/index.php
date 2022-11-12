@@ -8,8 +8,9 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
     }else {
         $email = $mysqli->real_escape_string($_POST['email']); 
         $senha = $mysqli->real_escape_string($_POST['senha']);
-        $sql_code = "SELECT  *  FROM usuarios WHERE email = '$email'
-         AND senha = '$senha";
+        $sql_code = "SELECT   email, senha  FROM usuarios WHERE email = '$email'
+         AND senha = '$senha'";
+
          $sql_query = $mysqli->query($sql_code) 
          or die("falha na execução do SQL"
         . $mysqli->error);
@@ -56,7 +57,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
         <h1>LOGIN</h1>   
             <div class="textfield">
                 <form action="" method="post">
-                   <label for="usuario">Usuário</label>
+                   <label for="email">Usuário</label>
                     <input type="text" name="email" placeholder="E-mail" required>
                 </div>
                 <div class="textfield">
@@ -69,7 +70,6 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
                   <button type="submit"  class="botao-login">Entrar</button>
                 </form>
             </div>
-    
         </div>
     </div>
 
