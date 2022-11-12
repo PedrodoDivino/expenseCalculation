@@ -2,9 +2,9 @@
 include('../bd/conectaBanco.php');    
 if(isset($_POST['email']) || isset($_POST['senha'])){
     if (strlen($_POST['email']) > 0) {
-        echo  "Preencha seu email"
+        echo  "Preencha seu email";
     }elseif (strlen($_POST['senha']) == 0){
-      echo  "Preencha sua senha"
+      echo  "Preencha sua senha";
     }else {
         $email = $mysqli->real_escape_string($_POST['email']); 
         $senha = $mysqli->real_escape_string($_POST['senha']);
@@ -24,12 +24,15 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
             }
             $_SESSION['id'] = $usuario['id'];
              $_SESSION['nome'] = $usuario['nome'];
-        else{
+
+             header("location: cadastroMateriaPrima.php");
+
+         } else{
             echo "falha ao logar, email ou senha incorretos";
             }
         }
     }
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -52,7 +55,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
     <div class="tela-login">
         <h1>LOGIN</h1>   
             <div class="textfield">
-                <form action="../db/verificaLogin.php" method="post">
+                <form action="" method="post">
                    <label for="usuario">Usuário</label>
                     <input type="text" name="usuario" placeholder="E-mail" required>
                 </div>
