@@ -2,16 +2,25 @@
     session_start();
     include('../db/conectaBanco.php');    
 
-    $nome = mysqli_real_escape_string($mysqli, $_POST['nome']);
-    $email = mysqli_real_escape_string($mysqli, $_POST['email']);
-    $numerCelular = mysqli_real_escape_string($mysqli, $_POST['number']);
-    $dataNascimento = mysqli_real_escape_string($mysqli, $_POST['data']);
-    $numeroResidencia = mysqli_real_escape_string($mysqli, $_POST['numero']);
-    $bairro = mysqli_real_escape_string($mysqli, $_POST['bairro']);
-    $complemento = mysqli_real_escape_string($mysqli, $_POST['complemento']);
-    $endereco = mysqli_real_escape_string($mysqli, $_POST['endereco']);
-    $senha = mysqli_real_escape_string($mysqli, $_POST['senha']);
+    $nome = mysqli_real_escape_string($mysqli, trim($_POST['nome']));
+    $email = mysqli_real_escape_string($mysqli, trim($_POST['email']));
+    $numerCelular = mysqli_real_escape_string($mysqli, trim($_POST['numeroCelular']));
+    $dataNascimento = mysqli_real_escape_string($mysqli, trim($_POST['data']));
+    $numeroResidencia = mysqli_real_escape_string($mysqli, trim($_POST['numero']));
+    $bairro = mysqli_real_escape_string($mysqli, trim($_POST['bairro']));
+    $complemento = mysqli_real_escape_string($mysqli, trim($_POST['complemento']));
+    $endereco = mysqli_real_escape_string($mysqli, trim($_POST['endereco']));
+    $senha = mysqli_real_escape_string($mysqli, trim($_POST['senha']));
+    $usuario = mysqli_real_escape_string($mysqli, trim($_POST['usuario']));
     
+    $sql_code = "select count(*) as total from usuarios where usuario = '$usuario'";
+    $result = mysqli_query($sql_code);
+    $row = mysqli_fetch_assoc($result);
+
+    if ($row['total'] == 1) {
+$_SESSION['usuario_existe'] = true;
+    header('Location: http://localhost/expenseCalculation/src/pages/ ')
+    }
 
     ?>
 <!DOCTYPE html>
@@ -50,8 +59,8 @@
                     </div>
 
                     <div class="input-box">
-                        <label for="number">Telefone Celular</label>
-                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+                        <label for="numeroCelular">Telefone Celular</label>
+                        <input id="numeroCelular" type="tel" name="numeroCelular" placeholder="(xx) xxxx-xxxx" required>
                     </div>
 
                     <div class="input-box">
