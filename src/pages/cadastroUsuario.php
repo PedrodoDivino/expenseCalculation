@@ -1,19 +1,24 @@
   <?php
-  include "../db/bancoDeDados.php";
-   $nome = filter_input(INPUT_POST,'nome');
-   $email = filter_input(INPUT_POST,'email');
-   $numeroCelular = filter_input(INPUT_POST,'numeroCelular'); 
-   $dataNascimento = filter_input(INPUT_POST,'dataNascimento');
-   $endereco = filter_input(INPUT_POST,'endereco');
-   $bairro = filter_input(INPUT_POST,'bairro', );
-   $numeroCasa = filter_input(INPUT_POST,'numero'  );
-   $complemento = filter_input(INPUT_POST,'complemento' );
-   $senha = filter_input(INPUT_POST,'senha' );
+    include '../db/conectaBanco.php';
+   $nome = $_POST['nome'];
+   $email = $_POST['email'];
+   $senha = $_POST['senha'];
+   $data_nascimento = $_POST['data_nascimento'];
+   $telefone_celular = $_POST['telefone_celular'];
+   $endereco = $_POST['endereco'];
+   $bairro = $_POST['bairro'];
+   $numero = $_POST['numero'];
+   $complemento = $_POST['complemento'];
+   $cep = $_POST['cep'];
+   $logradouro= $_POST['logradouro'];
 
-  $sql = "INSERT INTO usuarios (nome, email, senha, dataNascimento, numeroCelular)
-    VALUES ('$nome', '$email', '$senha', '$dataNascimento', '$numeroCelular', NOW())";
-    echo "nome $nome";
-    echo "email $email";
+   $insertUser = "INSERT INTO usuarios (nome, email,senha, data_nascimento, telefone_celular) VALUES ('$nome', '$email', '$senha', '$data_nascimento', '$telefone_celular')";
+
+   $insertEndereco = "INSERT INTO enderecos (cep, logradouro, numero, bairro, complemento) VALUES ('$cep', '$logradouro', '$numero', '$bairro', '$complemento')";
+
+$mysqli->query($insertUser);
+$mysqli->query($insertEndereco);
+
   ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -29,14 +34,14 @@
 <body>
  <div class="container">
         <div class="form-image">
-            <img src="imgcadastro.svg" alt=""></div>
+            <img src="imgcadastro.svg" ></div>
                 <div class="form" action="">
                     <div class="form-header">
                         <div class="title">
                             <h1>Criar Conta</h1>
                         </div>
                     </div>
-<form action="" method="post">
+<form action="index.php" method="post">
     <div class="input-group">
         <div class="input-box">
             <label for="nome">Nome Completo</label>
@@ -49,13 +54,13 @@
         </div>
 
         <div class="input-box">
-           <label for="numeroCelular">Telefone Celular</label>
-            <input id="numeroCelular" type="tel" name="numeroCelular" placeholder="(xx) xxxx-xxxx" required>
+           <label for="telefone_celular">Telefone Celular</label>
+            <input id="telefone_celular" type="tel" name="telefone_celular" placeholder="(xx) xxxx-xxxx" required>
         </div>
 
         <div class="input-box">
-            <label for="dataNascimento">Data Nascimento</label>
-            <input id="dataNascimento" type="date" name="dataNascimento" placeholder="xx/xx/xxxx">
+            <label for="data_nascimento">Data Nascimento</label>
+            <input id="data_nascimento" type="date" name="data_nascimento" placeholder="xx/xx/xxxx">
         </div>
 
         <div class="input-box">
@@ -66,6 +71,15 @@
         <div class="input-box">
             <label for="numero">Número</label>
             <input id="numero" type="number" name="numero" placeholder="Digite o Número" required>
+        </div>
+           <div class="input-box">
+            <label for="cep">cep</label>
+            <input id="cep" type="number" name="cep" placeholder="Digite o Cep" required>
+        </div>
+
+         <div class="input-box">
+            <label for="logradouro">Logradouro</label>
+            <input id="logradouro" type="text" name="logradouro" placeholder="Digite o logradouro" required>
         </div>
 
 
@@ -85,11 +99,10 @@
 
     </div>
         <div class="entrar-button">
-            <button type="submit">Cadastrar</button> 
+            <button type="submit" name="submit">Cadastrar</button> 
         </div>
  </form>  
     </div>
-
  </div>
 </body>
 </html> 
