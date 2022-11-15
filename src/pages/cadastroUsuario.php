@@ -67,7 +67,7 @@
 
         <div class="input-box">
             <label for="senha">Senha</label>
-            <input type="password" name="senha" placeholder="Digite sua senha" required minlength="8" maxlength="100">
+            <input type="password" name="senha" placeholder="Digite sua senha" required minlength="10" maxlength="100">
         </div>
 
     </div>

@@ -1,6 +1,38 @@
 <?php
 include('../db/conectaBanco.php');    
+
 if(isset($_POST['email']) || isset($_POST['senha'])){
+
+
+
+
+
+function crypto($value) {
+    $real = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X","Y","Z","a","b","c","d","e","f","g","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9"];
+  
+    $fake = ["Z","Y","X","W","V","U","T","S","R","Q","P","O","N","M","L","K","J","I","H","G","F","E","D","C","B","A","z","y","x","w","v","u","t","s","r","q","p","o","n","m","l","k","j","i","h","g","f","e","d","c","b","a","9","8","7","6","5","4","3","2","1","0"];
+
+    $ecryptedValue = array();
+    
+    $keys = str_split($value);
+    
+    foreach ($keys as $value) {
+        $key = array_search($value, $real);
+        array_push($ecryptedValue, $fake[$key]);
+    }
+    
+    return implode($ecryptedValue);
+  }
+  
+  $passwordCrypto = "lvwjmpvma98KVWILOVL";
+
+    $sql_search_user = "SELECT  nome, email, senha  FROM usuarios WHERE email = '$_POST['email']'";
+  
+  if ($sql_search_user['senha'] != crypto($_POST['senha'])) {
+    echo "Senha Incorreta!";
+    return;
+  }
+
     if (strlen($_POST['email']) == 0) {
         echo  "Preencha seu email";
     }elseif (strlen($_POST['senha']) == 0){

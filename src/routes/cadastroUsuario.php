@@ -11,8 +11,35 @@
    $cep = $_POST['cep'];
    $logradouro= $_POST['logradouro'];
 
+    $pattern = "/^[\w\W\d]{10,}$/";
+    
+    $result = preg_match($pattern,$senha);
+
+    if($result == false){
+        header("location: http://localhost/expenseCalculation/src/pages/cadastroUsuario.php");
+    }
+
+    function crypto($value) {
+        $real = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X","Y","Z","a","b","c","d","e","f","g","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9"];
+    
+        $fake = ["Z","Y","X","W","V","U","T","S","R","Q","P","O","N","M","L","K","J","I","H","G","F","E","D","C","B","A","z","y","x","w","v","u","t","s","r","q","p","o","n","m","l","k","j","i","h","g","f","e","d","c","b","a","9","8","7","6","5","4","3","2","1","0"];
+
+        $ecryptedValue = array();
+        
+        $keys = str_split($value);
+        
+        foreach ($keys as $value) {
+            $key = array_search($value, $real);
+            array_push($ecryptedValue, $fake[$key]);
+        }
+        return implode($ecryptedValue);
+    }
+
+    $criptedPassword = crypto($senha); 
+
+
    $insertUser = "INSERT INTO usuarios (nome, email,senha, data_nascimento, telefone_celular)
-    VALUES ('$nome', '$email', '$senha', '$data_nascimento', '$telefone_celular')";
+    VALUES ('$nome', '$email', '$criptedPassword', '$data_nascimento', '$telefone_celular')";
 
     if ($mysqli->query($insertUser) == true) {
         $last_id = $mysqli->insert_id;
