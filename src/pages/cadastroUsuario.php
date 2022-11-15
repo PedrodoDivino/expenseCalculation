@@ -1,25 +1,3 @@
-  <?php
-    include '../db/conectaBanco.php';
-   $nome = $_POST['nome'];
-   $email = $_POST['email'];
-   $senha = $_POST['senha'];
-   $data_nascimento = $_POST['data_nascimento'];
-   $telefone_celular = $_POST['telefone_celular'];
-   $endereco = $_POST['endereco'];
-   $bairro = $_POST['bairro'];
-   $numero = $_POST['numero'];
-   $complemento = $_POST['complemento'];
-   $cep = $_POST['cep'];
-   $logradouro= $_POST['logradouro'];
-
-   $insertUser = "INSERT INTO usuarios (nome, email,senha, data_nascimento, telefone_celular) VALUES ('$nome', '$email', '$senha', '$data_nascimento', '$telefone_celular')";
-
-   $insertEndereco = "INSERT INTO enderecos (cep, logradouro, numero, bairro, complemento) VALUES ('$cep', '$logradouro', '$numero', '$bairro', '$complemento')";
-
-$mysqli->query($insertUser);
-$mysqli->query($insertEndereco);
-
-  ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -41,65 +19,60 @@ $mysqli->query($insertEndereco);
                             <h1>Criar Conta</h1>
                         </div>
                     </div>
-<form action="index.php" method="post">
+<form action="../routes/cadastroUsuario.php" method="post">
     <div class="input-group">
         <div class="input-box">
             <label for="nome">Nome Completo</label>
-            <input id="nome" type="text" name="nome" placeholder="Digite seu Nome" required>
+            <input type="text" name="nome" placeholder="Digite seu Nome" required>
         </div>
 
         <div class="input-box">
             <label for="email">E-mail</label>
-            <input id="email" type="email" name="email" placeholder="E-mail" required>
+            <input  type="email" name="email" placeholder="E-mail" required>
         </div>
 
         <div class="input-box">
            <label for="telefone_celular">Telefone Celular</label>
-            <input id="telefone_celular" type="tel" name="telefone_celular" placeholder="(xx) xxxx-xxxx" required>
+            <input type="tel" name="telefone_celular" placeholder="(xx) xxxx-xxxx" required>
         </div>
 
         <div class="input-box">
             <label for="data_nascimento">Data Nascimento</label>
-            <input id="data_nascimento" type="date" name="data_nascimento" placeholder="xx/xx/xxxx">
-        </div>
-
-        <div class="input-box">
-            <label for="endereco">Endereço</label>
-            <input id="endereco" type="text" name="endereco" placeholder="Digite sua Rua" required>
+            <input type="date" name="data_nascimento" placeholder="xx/xx/xxxx">
         </div>
 
         <div class="input-box">
             <label for="numero">Número</label>
-            <input id="numero" type="number" name="numero" placeholder="Digite o Número" required>
+            <input type="number" name="numero" placeholder="Digite o Número" required>
         </div>
            <div class="input-box">
             <label for="cep">cep</label>
-            <input id="cep" type="number" name="cep" placeholder="Digite o Cep" required>
+            <input  type="number" name="cep" placeholder="Digite o Cep" required>
         </div>
 
          <div class="input-box">
             <label for="logradouro">Logradouro</label>
-            <input id="logradouro" type="text" name="logradouro" placeholder="Digite o logradouro" required>
+            <input type="text" name="logradouro" placeholder="Digite o logradouro" required>
         </div>
 
 
         <div class="input-box">
             <label for="bairro">Bairro</label>
-            <input id="bairro" type="text" name="bairro" placeholder="Digite seu Bairro" required>
+            <input type="text" name="bairro" placeholder="Digite seu Bairro" required>
         </div>
         <div class="input-box">
             <label for="complemento">Complento</label>
-            <input id="complemento" type="text" name="complemento" placeholder="Digite seu complemento" required>
+            <input  type="text" name="complemento" placeholder="Digite seu complemento" required>
         </div>
 
         <div class="input-box">
             <label for="senha">Senha</label>
-            <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required minlength="8" maxlength="100">
+            <input type="password" name="senha" placeholder="Digite sua senha" required minlength="8" maxlength="100">
         </div>
 
     </div>
         <div class="entrar-button">
-            <button type="submit" name="submit">Cadastrar</button> 
+            <button type="submit">Cadastrar</button> 
         </div>
  </form>  
     </div>

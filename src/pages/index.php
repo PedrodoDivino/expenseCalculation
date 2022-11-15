@@ -1,40 +1,3 @@
-<?php
-include('../db/conectaBanco.php');    
-if(isset($_POST['email']) || isset($_POST['senha'])){
-    if (strlen($_POST['email']) == 0) {
-        echo  "Preencha seu email";
-    }elseif (strlen($_POST['senha']) == 0){
-      echo  "Preencha sua senha";
-    }else {
-        $email = $mysqli->real_escape_string($_POST['email']); 
-        $senha = $mysqli->real_escape_string($_POST['senha']);
-        $sql_code = "SELECT   email, senha  FROM usuarios WHERE email = '$email'
-         AND senha = '$senha'";
-
-         $sql_query = $mysqli->query($sql_code) 
-         or die("falha na execução do SQL"
-        . $mysqli->error);
-        $quantidade = $sql_query->num_rows;
-
-        if( $quantidade == 1){
-
-            $usuario = $sql_query->fetch_assoc();
-
-            if(!isset($_SESSION)){
-                session_start();
-            }
-            $_SESSION['id'] = $usuario['id'];
-             $_SESSION['nome'] = $usuario['nome'];
-
-             header("location: http://localhost/expenseCalculation/src/pages/cadastroMateriaPrima.php");
-
-         } else{
-            echo "falha ao logar, email ou senha incorretos";
-            }
-        }
-    }
-
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -50,13 +13,18 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
     <div class="main-login">
         <div class="left-login">
             <h1>Seja Bem vindo(a)<br>Faça seu Login</h1>
+            <?php
+            if($_GET['cadastroStatus'] == 'sucess'){
+                echo '<h1>Cadastro Bem Sucedido</h1>';
+            }
+            ?>
                 <img src="imglogin.svg" class="left-login-imagem" alt="Financas animacao">
     </div>
         <div class="right-login">
     <div class="tela-login">
         <h1>LOGIN</h1>   
             <div class="textfield">
-                <form action="" method="post">
+                <form action="../routes/login.php" method="post">
                    <label for="email">Usuário</label>
                     <input type="text" name="email" placeholder="E-mail" required>
                 </div>
@@ -72,6 +40,5 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
             </div>
         </div>
     </div>
-
 </body>
 </html>
