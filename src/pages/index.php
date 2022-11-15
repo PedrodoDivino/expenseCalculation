@@ -13,11 +13,7 @@
     <div class="main-login">
         <div class="left-login">
             <h1>Seja Bem vindo(a)<br>Faça seu Login</h1>
-            <?php
-            if($_GET['cadastroStatus'] == 'sucess'){
-                echo '<h1>Cadastro Bem Sucedido</h1>';
-            }
-            ?>
+
                 <img src="imglogin.svg" class="left-login-imagem" alt="Financas animacao">
     </div>
         <div class="right-login">
