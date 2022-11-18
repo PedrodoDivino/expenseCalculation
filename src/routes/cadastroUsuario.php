@@ -11,6 +11,23 @@
    $cep = $_POST['cep'];
    $logradouro= $_POST['logradouro'];
 
+    $pattern = "/^[\w\W\d.\-\_]{3,}[@][\w\W]{3,}[.](com|com.br|edu.br)$/";
+    $result = preg_match($pattern,$email);
+    if($result == false){
+        echo"Email Invalido";
+        return;
+    }
+
+    $sql_code = "SELECT email FROM usuarios WHERE email = '$email'";
+    $sql_query = $mysqli->query($sql_code);
+    
+    $quantidade = $sql_query->num_rows;
+
+    if($quantidade == 1){ 
+        echo "Email já Cadastrado!";
+        return;
+    }
+    
     $pattern = "/^[\w\W\d]{10,}$/";
     
     $result = preg_match($pattern,$senha);
@@ -56,6 +73,6 @@
     }
 
 
-   header("location: http://localhost/expenseCalculation/src/pages?cadastroStatus=sucess");
+   header("location: http://localhost/expenseCalculation/src/pages/");
 
   ?>

@@ -46,7 +46,7 @@
             <input type="number" name="numero" placeholder="Digite o Número" required>
         </div>
            <div class="input-box">
-            <label for="cep">cep</label>
+            <label for="cep">Cep</label>
             <input  type="number" name="cep" placeholder="Digite o Cep" required>
         </div>
 
