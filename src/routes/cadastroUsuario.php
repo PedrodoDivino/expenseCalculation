@@ -58,6 +58,8 @@
    $insertUser = "INSERT INTO usuarios (nome, email,senha, data_nascimento, telefone_celular)
     VALUES ('$nome', '$email', '$criptedPassword', '$data_nascimento', '$telefone_celular')";
 
+    // ($hoje = date('d/m/Y H:i') > $expiracao_senha)
+
     if ($mysqli->query($insertUser) == true) {
         $last_id = $mysqli->insert_id;
 
@@ -72,7 +74,6 @@
         exit;
     }
 
-
-   header("location: http://localhost/expenseCalculation/src/pages/");
+    header("location: http://localhost/expenseCalculation/src/pages/");
 
   ?>

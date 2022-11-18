@@ -25,7 +25,7 @@ function crypto($value) {
     }else {
         $email = $mysqli->real_escape_string($_POST['email']); 
         $senha = crypto($mysqli->real_escape_string($_POST['senha']));
-        $sql_code = "SELECT   email, senha  FROM usuarios WHERE email = '$email'
+        $sql_code = "SELECT   email, senha, expiracao_senha  FROM usuarios WHERE email = '$email'
          AND senha = '$senha'";
 
         $sql_query = $mysqli->query($sql_code) 
@@ -37,6 +37,10 @@ function crypto($value) {
 
             $usuario = $sql_query->fetch_assoc();
 
+            //if($rows['expiracao_senha'] == $hoje = new DateTime('Y/m/d H:i')){
+                //header("location: http://localhost/expenseCalculation/src/pages/trocarSenha.php");
+               
+           //}
 
             if(!isset($_SESSION)){
               session_start();
