@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['id'])){
+ header("location: http://localhost/expenseCalculation/src/pages/");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,86 +47,41 @@
     <input type="date" class="form-control" name="data_producao" aria-label="Last name" minlength="1" maxlength="100">
 </div>
   <div class="ingredientes">
-    <form >
-      <div class="row">
-          <div class="col">
-            <div style="heigth"></div>
-               Ingredientes
-  <div class="space"></div>
-   <div class="space form-check">
-      <input class="form-check-input" type="checkbox" name="nomeItem" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Farinha
-      </label>
-      <div class="space"></div>
+    <form method="get">
+      <?php
+      // include('../db/conectaBanco.php');  
+      // $select = "SELECT * FROM materia_prima_receita";
+      // $resultado = mysqli_query($mysqli, $select);
+      //  $quantidade = $GET['quantidade'];
+      //  $nome = $GET['nome']; 
+?>
+      <div class="container text-center">
+  <div class="row">
+    <div class="col">
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+  <label class="form-check-label" for="flexCheckChecked">Nome do Item
+
+  </label>
+</div>
     </div>
-       <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Ovo
-      </label>
-      <div class="space"></div>
+    <div class="col">
+<div class="form-check">
+  <input type="text" class="form-control" placeholder="quantidade" aria-label="quantidade" aria-describedby="basic-addon1">
+  <label class="form-check-label" for="flexCheckChecked">
+  </label>
+</div>
     </div>
-       <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Açucar
-      </label>
-      <div class="space"></div>
-    </div>
-       <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-       Óleo
-      </label>
-      <div class="space"></div>
-    </div>
-       <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-       Leite
-      </label>
-      <div class="space"></div>
-    </div>
-       <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Fermento
-      </label>
-      <div class="space"></div>
-    </div>
-       <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-       chocolate
-      </label>
-      <div class="space"></div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    Quantidade (gr)
-     <div class="space"></div>
-    <input type="number"  class=" form-control" placeholder="farinha">
-      <div class="space"></div>
-    <input type="number"  class=" form-control" placeholder="ovo">
-      <div class="space"></div>
-    <input type="number"  class=" form-control" placeholder="Açucar">
-      <div class="space"></div>
-    <input type="number"  class=" form-control" placeholder="óleo">
-      <div class="space"></div>
-    <input type="number"  class=" form-control" placeholder="Leite">
-      <div class="space"></div>
-    <input type="number"  class=" form-control" placeholder="Fermento">
-      <div class="space"></div>
-    <input type="number"  class=" form-control" placeholder="Chocolate">
   </div>
 </div>
-<button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-Continuar
-</button>
-</div> 
+
+  </div>
+    <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Continuar
+    </button>
+  </div> 
+    </form>
 </form>
-<br>
   </div>
   </div>
   <div class="info"><p>Obs: Ovo Médio Equivale 53gr!</p></div>
@@ -134,7 +95,7 @@ Continuar
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-<form action="minhasReceitas.php" method="post">
+<form action="produto.php" method="post">
     <div class="col">
     Nome do produto
     <input type="text" class="form-control"  aria-label="First name" required>
@@ -163,9 +124,12 @@ Continuar
       </div>
     </div>
   </div>
+ 
 </div>
+
 </form>
   </div>
+
    
 </body>
 </html>
