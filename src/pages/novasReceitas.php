@@ -48,13 +48,6 @@ if(!isset($_SESSION['id'])){
 </div>
   <div class="ingredientes">
     <form method="get">
-      <?php
-      // include('../db/conectaBanco.php');  
-      // $select = "SELECT * FROM materia_prima_receita";
-      // $resultado = mysqli_query($mysqli, $select);
-      //  $quantidade = $GET['quantidade'];
-      //  $nome = $GET['nome']; 
-?>
       <div class="container text-center">
   <div class="row">
     <div class="col">
@@ -87,6 +80,7 @@ if(!isset($_SESSION['id'])){
   <div class="info"><p>Obs: Ovo Médio Equivale 53gr!</p></div>
 
 </form>
+<form action="../routes/produto.php" method="post">
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -95,41 +89,38 @@ if(!isset($_SESSION['id'])){
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-<form action="produto.php" method="post">
     <div class="col">
     Nome do produto
-    <input type="text" class="form-control"  aria-label="First name" required>
+    <input type="text" class="form-control" name="nome" aria-label="First name" required>
   </div>
       <div class="col">
    Preço final
-    <input type="number" class="form-control"  aria-label="First name" required>
+    <input type="number" class="form-control"  name="preco_final" aria-label="First name" required>
   </div>
       <div class="col">
    Tipo do Produto
-    <input type="text" class="form-control"  aria-label="First name" required>
+    <input type="text" class="form-control" name="tipo" aria-label="First name" required>
   </div>
       <div class="col">
     Descrição do produto
-    <input type="text" class="form-control"  aria-label="First name" required>
+    <input type="text" class="form-control" name="descricao" aria-label="First name" required>
   </div>
-      <div class="col">
+  <div class="col">
     Data de vencimento
-    <input type="date" class="form-control"  aria-label="First name" required>
+    <input type="date" class="form-control"  name="data_vencimento" aria-label="First name" required>
   </div>
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button type="submit" class="btn btn-primary">Salvar</button>
-      </div>
-    </div>
-  </div>
- 
 </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+  </div>
+</div>
+  </div>
 
+</div>
 </form>
   </div>
-
    
 </body>
 </html>

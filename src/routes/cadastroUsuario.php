@@ -11,6 +11,13 @@
    $cep = $_POST['cep'];
    $logradouro= $_POST['logradouro'];
 
+   $pattern = "/^[\w\W\d.-_]{3,}[@][\w\W]{3,}[.](com|com.br|edu.br)$/";
+    $result = preg_match($pattern,$email);
+    if($result == false){
+        echo"Email Invalido";
+        return;
+    }
+    
     $pattern = "/^[\w\W\d]{10,}$/";
     
     $result = preg_match($pattern,$senha);
