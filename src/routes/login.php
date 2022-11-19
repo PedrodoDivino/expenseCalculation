@@ -25,9 +25,10 @@ function crypto($value) {
     }else {
         $email = $mysqli->real_escape_string($_POST['email']); 
         $senha = crypto($mysqli->real_escape_string($_POST['senha']));
-        $sql_code = "SELECT   email, senha, expiracao_senha  FROM usuarios WHERE email = '$email'
+        $sql_code = "SELECT  id, email, senha  FROM usuarios WHERE email = '$email'
          AND senha = '$senha'";
-
+    TODO: //NÃO ESQUECER DE COLOCAR COMO PARAMETRO O "expiracao_senha"
+    FIXME:// expiração senha linha
         $sql_query = $mysqli->query($sql_code) 
          or die("falha na execução do SQL"
         . $mysqli->error);
@@ -39,16 +40,19 @@ function crypto($value) {
 
             //if($rows['expiracao_senha'] == $hoje = new DateTime('Y/m/d H:i')){
                 //header("location: http://localhost/expenseCalculation/src/pages/trocarSenha.php");
-               
+
            //}
 
-            if(!isset($_SESSION)){
-              session_start();
-          }
+        //     if(!isset($_SESSION)){
+        //       session_start();
+        //   }
+          session_start();
+
           $_SESSION['id'] = $usuario['id'];
           $_SESSION['nome'] = $usuario['nome'];
 
            header("location: http://localhost/expenseCalculation/src/pages/cadastroMateriaPrima.php");
+           
 
        } else{
           echo "Falha ao logar, email ou senha incorretos";
