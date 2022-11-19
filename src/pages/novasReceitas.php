@@ -21,16 +21,16 @@
   </nav>
 </header>
 <body>
-  <form method="post">
+  <form  action="../routes/novasreceitas.php" method="post">
     <div class="container">
-<div class="row">
+      <div class="row">
   <div class="col">
     Nome da Receita
-    <input type="text" class="form-control" name="nomeReceita" aria-label="First name" required>
+    <input type="text" class="form-control" name="nome" aria-label="First name" required>
   </div>
   <div class="col">
      Margem de lucro %
-    <input type="number" class="form-control"   name="margemLucro" aria-label="Last name" minlength="1" maxlength="100">
+    <input type="number" class="form-control"   name="margem_lucro" aria-label="Last name" minlength="1" maxlength="100">
   </div>
 <div class="col">
     Embalagem
@@ -38,10 +38,10 @@
 </div>
 <div class="col">
     Data Produção
-    <input type="date" class="form-control" name="dataProducao" aria-label="Last name" minlength="1" maxlength="100">
+    <input type="date" class="form-control" name="data_producao" aria-label="Last name" minlength="1" maxlength="100">
 </div>
   <div class="ingredientes">
-    <form  method="post">
+    <form >
       <div class="row">
           <div class="col">
             <div style="heigth"></div>
@@ -115,16 +115,16 @@
     <input type="number"  class=" form-control" placeholder="Chocolate">
   </div>
 </div>
+<button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+Continuar
+</button>
 </div> 
 </form>
 <br>
   </div>
   </div>
   <div class="info"><p>Obs: Ovo Médio Equivale 53gr!</p></div>
-  <div class="button">
-<button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-Continuar
-</button>
+
 </form>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">

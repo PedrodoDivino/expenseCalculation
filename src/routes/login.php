@@ -25,9 +25,10 @@ function crypto($value) {
     }else {
         $email = $mysqli->real_escape_string($_POST['email']); 
         $senha = crypto($mysqli->real_escape_string($_POST['senha']));
-        $sql_code = "SELECT   email, senha, expiracao_senha  FROM usuarios WHERE email = '$email'
+        $sql_code = "SELECT   email, senha  FROM usuarios WHERE email = '$email'
          AND senha = '$senha'";
-
+    TODO: //NÃO ESQUECER DE COLCOAR COMO PARAMETRO O "expiracao_senha"
+    FIXME:// expiração senha linha
         $sql_query = $mysqli->query($sql_code) 
          or die("falha na execução do SQL"
         . $mysqli->error);
