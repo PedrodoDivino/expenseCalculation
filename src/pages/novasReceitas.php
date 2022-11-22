@@ -51,7 +51,7 @@ if(!isset($_SESSION['id'])){
       <div class="container text-center">
   <div class="row">
     <div class="col">
-<div class="form-check">
+<!-- <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
   <label class="form-check-label" for="flexCheckChecked">Nome do Item
 
@@ -63,7 +63,7 @@ if(!isset($_SESSION['id'])){
   <input type="text" class="form-control" placeholder="quantidade" aria-label="quantidade" aria-describedby="basic-addon1">
   <label class="form-check-label" for="flexCheckChecked">
   </label>
-</div>
+</div> -->
     </div>
   </div>
 </div>
@@ -109,12 +109,11 @@ if(!isset($_SESSION['id'])){
     Data de vencimento
     <input type="date" class="form-control"  name="data_vencimento" aria-label="First name" required>
   </div>
-
-</div>
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
     <button type="submit" class="btn btn-primary">Salvar</button>
   </div>
+</div>
 </div>
   </div>
 
