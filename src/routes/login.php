@@ -3,21 +3,21 @@ include('../db/conectaBanco.php');
 
 if(isset($_POST['email']) || isset($_POST['senha'])){
 //R5  
-function crypto($value) {
-    $real = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X","Y","Z","a","b","c","d","e","f","g","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9"];
+function crypto($valor) {
+    $ordenado = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X","Y","Z","a","b","c","d","e","f","g","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9"];
   
-    $fake = ["Z","Y","X","W","V","U","T","S","R","Q","P","O","N","M","L","K","J","I","H","G","F","E","D","C","B","A","z","y","x","w","v","u","t","s","r","q","p","o","n","m","l","k","j","i","h","g","f","e","d","c","b","a","9","8","7","6","5","4","3","2","1","0"];
+    $desordenado = ["Z","Y","X","W","V","U","T","S","R","Q","P","O","N","M","L","K","J","I","H","G","F","E","D","C","B","A","z","y","x","w","v","u","t","s","r","q","p","o","n","m","l","k","j","i","h","g","f","e","d","c","b","a","9","8","7","6","5","4","3","2","1","0"];
 
-    $ecryptedValue = array();
+    $valorCriptografado = array();
     
-    $keys = str_split($value);
+    $armazenaSplit = str_split($valor);
     
-    foreach ($keys as $value) {
-        $key = array_search($value, $real);
-        array_push($ecryptedValue, $fake[$key]);
+    foreach ($armazenaSplit as $valor) {
+        $armazenaSearch = array_search($valor, $ordenado);
+        array_push($valorCriptografado, $desordenado[$armazenaSearch]);
     }
     
-    return implode($ecryptedValue);
+    return implode($valorCriptografado);
   }
     if (strlen($_POST['email']) == 0) {
         echo  "Preencha seu email";
