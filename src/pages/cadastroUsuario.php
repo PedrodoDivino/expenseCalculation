@@ -67,7 +67,7 @@
 
         <div class="input-box">
             <label for="senha">Senha</label>
-            <input type="password" name="senha" placeholder="Digite sua senha" required minlength="10" maxlength="100" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d].\S{10,}$"  required>
+            <input type="password" name="senha" placeholder="Digite sua senha" required minlength="10" maxlength="100" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d].\S{10,}$">
         </div>
 
     </div>
