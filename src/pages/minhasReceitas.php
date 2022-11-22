@@ -3,6 +3,12 @@ session_start();
 if(!isset($_SESSION['id'])){
  header("location: http://localhost/expenseCalculation/src/pages/");
 }
+include('../db/conectaBanco.php'); 
+
+$sql = "SELECT *FROM receitas";
+
+$result = $mysqli->query($sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -27,32 +33,31 @@ if(!isset($_SESSION['id'])){
   </nav>
 </header>
 <body>
-    <div class="card" style="width: 18rem;">
-  <div class=" fundoCard card-body">
-    <h1 class="card-title">Bolo de Cenura</h1>
-<p>Óleo 250gr
-<br>  
-Cenoura 300g
-<br>
-Ovos 53gr
-<br>
-Farinha de Trigo 400g
-<br>
-Fermento em Pó 20g
-<br>
-Manteiga 20gr
-<br>
-Chocolate em Pó 200gr
-<br>
-Açúcar 200g
-<br>
-Leite 350gr
-</p>   
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    
+    <?php while($dado = $result->fetch_array()){ ?>
+      <div class="card" style="display:inline-block">
+  <div class="fundoCard card-body">
+    <h1 class="card-title"><?php echo $dado["nome"]; ?></h1>
+    <div>
+      <tr>
+      <p> <strong>Sua margem de lucro é:</strong>  <td><?php echo $dado["margem_lucro"]; ?></td> %</p> 
+      
+      
+     <p> <strong>A sua embalagem é:</strong>  <td><?php echo $dado["embalagem"]; ?></td></p>
+     
+      <p> <strong>Data de produção é:</strong>  <td><?php echo $dado["data_producao"]; ?></td></p>
+     
+    </tr>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
  Fabricar
 </button>
+ 
+  </table>
+</div>  
+
   </div>
 </div>
+<?php }?>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -69,5 +74,8 @@ Leite 350gr
     </div>
   </div>
 </div>
+</form> 
+
+
 </body>
 </html>
