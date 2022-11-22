@@ -30,7 +30,7 @@
                     <input type="password" name="senha" placeholder="Senha"  required>
                 </div>
                 <div class="tela-cadastro">
-                    <p id="conta">Não tem uma conta? <a href="cadastroUsuario.php" target="_blank" > Crie uma Conta.</a></p>
+                    <p id="conta">Não tem uma conta? <a href="cadastroUsuario.php" > Crie uma Conta.</a></p>
                 </div>
                   <button type="submit"  class="botao-login">Entrar</button>
                 </form>
