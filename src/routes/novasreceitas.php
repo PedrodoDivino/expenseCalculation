@@ -2,6 +2,11 @@
 include('../db/conectaBanco.php');
     session_start();
     $id=$_SESSION['id'];
+
+    if(!isset($_SESSION['id'])){
+        header("location: http://localhost/expenseCalculation/src/pages/");
+    }
+
     $margem_lucro = $_POST['margem_lucro'];
     $nome = $_POST['nome']; 
     $embalagem = $_POST['embalagem']; 

@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['id'])){
+ header("location: http://localhost/expenseCalculation/src/pages/");
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -11,14 +17,14 @@
 <div>
     <h1>Troque sua Senha!</h1>
 </div>
-<form action="../routes/cadastroUsuario.php" method="post">
+<form action="../routes/trocarSenha.php" method="post">
 <div class="input-box">
-            <label for="novaSenha">Senha Nova</label>
-            <input type="password" name="novaSenha" placeholder="Nova Senha" required>
+        <label for="novaSenha">Senha Nova</label>
+        <input type="password" name="senha" placeholder="Nova Senha" required>
         </div>
         </div>
         <div class="entrar-button">
-            <button type="submit">Salvar</button> 
+        <button type="submit">Salvar</button> 
         </div>
         </form>
 </body>
