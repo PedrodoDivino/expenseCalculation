@@ -28,8 +28,6 @@ function crypto($value) {
         $senha = crypto($mysqli->real_escape_string($_POST['senha']));
         $sql_code = "SELECT  id, email, senha  FROM usuarios WHERE email = '$email'
          AND senha = '$senha'";
-    TODO: //NÃO ESQUECER DE COLOCAR COMO PARAMETRO O "expiracao_senha"
-    FIXME:// expiração senha linha
         $sql_query = $mysqli->query($sql_code) 
          or die("falha na execução do SQL"
         . $mysqli->error);
@@ -39,10 +37,6 @@ function crypto($value) {
 
             $usuario = $sql_query->fetch_assoc();
 
-        //     if(!isset($_SESSION)){
-        //       session_start();
-        //   }
-          
         session_start(); 
         $_SESSION['id'] = $usuario['id'];
         $_SESSION['nome'] = $usuario['nome'];

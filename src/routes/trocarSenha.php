@@ -34,7 +34,8 @@
 
     $criptedPassword = crypto($senha); 
 
-    $getLastPassword = "SELECT * FROM historico_senha WHERE usuario_id =  '$id' ORDER BY id DESC LIMIT 3"; //Ao inves de pegar pela data eu ordeno pelo ID na ordem decresente e limito para 3 resultados apenas.
+    $getLastPassword = "SELECT * FROM historico_senha WHERE usuario_id =  '$id' ORDER BY id DESC LIMIT 3"; 
+    //Ao inves de pegar pela data eu ordeno pelo ID na ordem decresente e limito para 3 resultados apenas.
     $rows = $mysqli->query($getLastPassword);
     $isPasswordUsed = false;
     while($row = $rows->fetch_assoc()) {

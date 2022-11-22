@@ -28,13 +28,12 @@
         return;
     }
     //R2
-    $pattern = "/^[\w\W\d]{10,}$/";
+    /*   $pattern = "/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d].\S{10,}$/";
     
     $result = preg_match($pattern,$senha);
-
     if($result == false){
         header("location: http://localhost/expenseCalculation/src/pages/cadastroUsuario.php");
-    }
+    }  */
     //R5
     function crypto($value) {
         $real = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X","Y","Z","a","b","c","d","e","f","g","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9"];
