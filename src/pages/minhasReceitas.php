@@ -1,13 +1,15 @@
-<?php 
+<?php
+session_start();
+if(!isset($_SESSION['id'])){
+ header("location: http://localhost/expenseCalculation/src/pages/");
+}
 include('../db/conectaBanco.php'); 
 
 $sql = "SELECT *FROM receitas";
 
 $result = $mysqli->query($sql);
 
-
-?> 
-
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

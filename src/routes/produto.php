@@ -2,6 +2,11 @@
 include('../db/conectabanco.php');
     session_start();
     $id=$_SESSION['id'];
+
+    if(!isset($_SESSION['id'])){
+        header("location: http://localhost/expenseCalculation/src/pages/");
+    }
+
     $nome = $_POST['nome'];
     $preco_final = $_POST['preco_final']; 
     $tipo = $_POST['tipo']; 

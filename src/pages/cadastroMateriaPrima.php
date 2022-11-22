@@ -1,4 +1,9 @@
-
+<?php
+session_start();
+if(!isset($_SESSION['id'])){
+ header("location: http://localhost/expenseCalculation/src/pages/");
+}
+?>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">

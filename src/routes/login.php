@@ -2,6 +2,7 @@
 include('../db/conectaBanco.php');    
 
 if(isset($_POST['email']) || isset($_POST['senha'])){
+//R5  
 function crypto($value) {
     $real = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X","Y","Z","a","b","c","d","e","f","g","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9"];
   
@@ -38,20 +39,17 @@ function crypto($value) {
 
             $usuario = $sql_query->fetch_assoc();
 
-            //if($rows['expiracao_senha'] == $hoje = new DateTime('Y/m/d H:i')){
-                //header("location: http://localhost/expenseCalculation/src/pages/trocarSenha.php");
-
-           //}
-
         //     if(!isset($_SESSION)){
         //       session_start();
         //   }
-          session_start();
+          
+        session_start(); 
+        $_SESSION['id'] = $usuario['id'];
+        $_SESSION['nome'] = $usuario['nome'];
 
-          $_SESSION['id'] = $usuario['id'];
-          $_SESSION['nome'] = $usuario['nome'];
+        
 
-           header("location: http://localhost/expenseCalculation/src/pages/cadastroMateriaPrima.php");
+        header("location: http://localhost/expenseCalculation/src/pages/cadastroMateriaPrima.php");
            
 
        } else{

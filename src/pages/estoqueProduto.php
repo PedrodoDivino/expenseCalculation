@@ -1,9 +1,12 @@
 <?php
+session_start();
+if(!isset($_SESSION['id'])){
+ header("location: http://localhost/expenseCalculation/src/pages/");
+}
 include '../db/conectabanco.php';
 $consulta = "SELECT * FROM materias_primas";
 $con = $mysqli->query($consulta) or die($mysqli->error);
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
