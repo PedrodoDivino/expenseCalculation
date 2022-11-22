@@ -1,3 +1,9 @@
+<?php
+include '../db/conectabanco.php';
+$consulta = "SELECT * FROM materias_primas";
+$con = $mysqli->query($consulta) or die($mysqli->error);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -32,50 +38,17 @@
      <th scope="col">Descrição</th>
       <th scope="col">Valor Total R$</th>
     </tr>
+    <?php while($dado = $con->fetch_array()){?>
   </thead>
   <tbody>
     <tr class="table-light">
-      <td>Chocolate</td>
-        <td>700</td>
-        <td>20/11/3212</td>
-         <td>Cacau</td>
-        <td>20,00</td>
+      <td><?php echo $dado["id"]; ?></td>
+      <td><?php echo $dado["valor"]; ?></td>
+      <td><?php echo $dado["descricao"]; ?></td>
+      <td><?php echo $dado["data_entrada"]; ?></td>
+      <td><?php echo $dado["nome"]; ?></td>
     </tr>
-    <tr class="table-light">
-        <td>Farinha</td>
-        <td>1000</td>
-          <td>20/11/3212</td>
-         <td>Cacau</td>
-        <td>62,32</td>
-    </tr>
-    <tr class="table-light">
-        <td>Ovo</td>
-        <td>30</td>
-          <td>20/11/3212</td>
-         <td>Cacau</td>
-        <td>45,75</td>
-    </tr>
-    <tr class="table-light">
-        <td>Açúcar</td>
-        <td>800</td>
-          <td>20/11/3212</td>
-         <td>Cacau</td>
-        <td>30,00</td>
-    </tr>
-    <tr class="table-light">
-        <td>Óleo</td>
-        <td>1200</td>
-          <td>20/11/3212</td>
-         <td>Cacau</td>
-        <td>95,23</td>
-    </tr>
-    <tr class="table-light">
-        <td>Leite</td>
-        <td>1000</td>
-          <td>20/11/3212</td>
-         <td>Cacau</td>
-        <td>80,00</td>
-    </tr>
+    <?php } ?>
   </tbody>
 </table>
     </div>
