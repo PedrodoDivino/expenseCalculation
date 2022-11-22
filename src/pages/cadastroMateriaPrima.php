@@ -24,20 +24,20 @@
 </header>
 <body>
 <div class="container">
-  <form action="estoqueProduto.php" method="post">
+  <form action="../routes/cadastroMateriaPrima.php" method="post">
     <div class="row">
         <div class="col">
           <h5>Nome Matéria Prima</h5>
-          <input type="text" class="form-control" name="materiaPrima" placeholder="Ex: Cenoura" required>
+          <input type="text" class="form-control" name="nomeMateriaPrima" placeholder="Ex: Cenoura" required>
           <br>
           <h5>Descrição</h5>
-          <input type="text" class="form-control"  name="descricao" placeholder="Ex: Rico em vitamina A" required>
+          <input type="text" class="form-control"  name="descricaoMateriaPrima" placeholder="Ex: Rico em vitamina A" required>
                     <br>
-          <h5>Quantidade</h5>
-          <input type="number" class="form-control"  name="domeMQuantidade"placeholder="Ex: 100gr" required>
-                    <br>
+          <!-- <h5>Quantidade</h5>
+          <input type="number" class="form-control"  name="nomeQuantidadeMateriaPrima"placeholder="Ex: 100gr" required>
+                    <br> -->
           <h5>Valor Total</h5>
-          <input type="number" class="form-control"  name="nomeValorTotal"placeholder="Ex: 50.00"required>
+          <input type="number" class="form-control"  name="nomeValorTotalMateriaPrima"placeholder="Ex: 50.00"required>
                     <br>
           <h5>Data Entrada</h5>
           <input type="date" class="form-control" name="datadeEntrada" placeholder="Ex: 30/09/2022" required>
